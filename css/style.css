@@ -15,23 +15,23 @@
     --DarkGrayishBlue: hsl(232, 10%, 55%);
     --GrayishBlue: hsl(210, 4%, 67%);
     --White: hsl(0, 0%, 100%);
-  }
+}
+
 body,html{
       display: flex;
       flex-direction: column;
       margin: 0;
       padding: 0;
       font-size: 18px;
-} 
+}
+
+
 header{
-    padding: 1%;
     display: flex;
     flex-direction: column;
     max-width: 100%;
-    min-height: 750px;
-    background: url(../images/desktop/image-header.jpg) no-repeat;
-    background-size: 100% 100%;
 }
+
 
 header >h1{
    align-self: center;
@@ -221,6 +221,19 @@ article.photography p{
     text-align: center;
     margin-bottom: 10%;
 }
+
+@media(min-width:375px){
+    header{
+        padding: 1%;
+        min-height: 750px;
+        background: url(../images/desktop/image-header.jpg) no-repeat;
+        background-size: 100% 100%;
+    }
+}
+
+
+
+
 /*Movil*/
 
 @media (max-width:375px) {
@@ -233,8 +246,38 @@ article.photography p{
         align-self: center;
         font-size: 2rem;
     }
-
-    .item{
+    
+    article section{
         width: 100%;
+        height: 60%;
     }
+    article.transform{
+        height: 100vh;
+        background: url(../images/mobile/image-transform.jpg) no-repeat;
+        background-size: 100% 50%;
+        justify-content: flex-end;
+    }
+
+    article.stand{
+        height: 100vh;
+        background: url(../images/mobile/image-stand-out.jpg) no-repeat;
+        width: 100%;
+        background-size: 100% 40%;
+        justify-content: flex-end;
+    }
+    
+    article.graphic{
+        height: 100vh;
+        background: url(../images/mobile/image-graphic-design.jpg) no-repeat;
+        width: 100%;
+        background-size: 100% 100%;
+    }
+
+    article.photography{
+        height: 100vh;
+        background: url(../images/mobile/image-photography.jpg) no-repeat;
+        width:100%;
+        background-size: 100% 100%;
+    }
+
 }
